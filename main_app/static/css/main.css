@@ -1,36 +1,120 @@
 body {
-	padding: 0;
-	margin: 0;
-	font-family: 'Anton', sans-serif;
-	color: black;
-	font-size: 16px;
+    padding: 0;
+    margin: 0;
+    font-family: 'Anton', sans-serif;
+    color: black;
+    font-size: 16px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	padding: 0;
-	margin: 0;
-	text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
 }
 
 ul, li {
-	display: block;
-	padding: 0;
-	margin: 0;
+    display: block;
+    padding: 0;
+    margin: 0;
 }
 
 .container {
-	width: 1170px;
-	/*позиционирование по центру*/
-	margin: 0 auto;
-}
-
-.box {
-	width: 100px;
-	height: 100px;
-	background: black;
-	margin-top: 30px;
+    width: 1000px;
+    /*позиционирование по центру*/
+    margin: 0 auto;
 }
 
 .header {
-	background: url('../img/hands.jpg') no-repeat center top / cover;
+    background: url('../img/pink_logo_bg.png') no-repeat center top / cover;
+    padding-top: 50px;
 }
+
+header a {
+    color: #fff;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu li a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+}
+
+.menu li {
+    margin-right: 40px;
+    /*margin-top: 50px;*/
+}
+
+.refers {
+    margin-left: 400px;
+}
+
+.booking {
+    padding-top: 600px;
+    padding-bottom: 10px;
+}
+
+.booking li {
+    margin-bottom: 50px;
+}
+
+.booking li a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 30px;
+    letter-spacing: 0.1em;
+}
+
+.tickets_button {
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    padding: .8em 1em calc(.8em + 3px);
+    border-radius: 0px;
+    background: #FF69B4;
+    box-shadow: 0 -3px #FF69B4 inset;
+    transition: 0.2s;
+}
+
+.listen {
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    padding: .8em 1em calc(.8em + 3px);
+    border-radius: 0px;
+    background: #FF69B4;
+    box-shadow: 0 -3px #FF69B4 inset;
+    transition: 0.2s;
+}
+
+.record {
+    padding-top: 115px;
+}
+
+.record li {
+    margin-top: 100px;
+    margin-left: 100px;
+
+}
+
+.record li a{
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 25px;
+    letter-spacing: 0.1em;
+}
+
+.listening {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.nav2 {
+    display: flex;
+}
+
+
