@@ -26,7 +26,7 @@ ul, li {
 
 .header {
     background: url('../img/pink_logo_bg.png') no-repeat center top / cover;
-    padding-top: 50px;
+    padding-top: 25px;
 }
 
 header a {
@@ -40,13 +40,12 @@ header a {
 .menu li a {
     text-transform: uppercase;
     text-decoration: none;
-    font-size: 20px;
-    letter-spacing: 0.1em;
+    font-size: 22px;
+    letter-spacing: 0.2em;
 }
 
 .menu li {
     margin-right: 40px;
-    /*margin-top: 50px;*/
 }
 
 .refers {
@@ -65,7 +64,7 @@ header a {
 .booking li a {
     text-transform: uppercase;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 25px;
     letter-spacing: 0.1em;
 }
 
@@ -97,14 +96,13 @@ header a {
 
 .record li {
     margin-top: 100px;
-    margin-left: 100px;
-
+    margin-left: 80px;
 }
 
 .record li a{
     text-transform: uppercase;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 30px;
     letter-spacing: 0.1em;
 }
 
@@ -115,6 +113,32 @@ header a {
 
 .nav2 {
     display: flex;
+    color: #FF69B4;
 }
 
+.gallery {
+    background: #FF69B4 no-repeat;
+    display: flex;
+}
+
+.subscribe {
+    margin-top: 250px;
+    margin-left: 50px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 30px;
+    letter-spacing: 0.1em;
+    color: #fff;
+}
+
+.patches {
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.copyrights li a {
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    font-size: 14px;
+}
 
