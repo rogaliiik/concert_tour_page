@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.views.generic.base import View
 from .forms import SubscribeForm
-from .models import Subscriber
+from .models import Subscriber, Concert
 from django.http import HttpResponse
 
 
@@ -10,7 +10,6 @@ def redirect_view(request):
 
 
 class MainView(View):
-
     def get(self, request):
         sub_form = SubscribeForm()
         context = {
@@ -25,3 +24,9 @@ class MainView(View):
             return HttpResponse('An email with information has been sent')
         else:
             return render(request, 'main.html', {'subscribe_form': sub_form})
+
+
+class TourView(View):
+    def get(self, request):
+        concerts = Concert.objects.all()
+        return render(request, 'tour.html', {'concerts': concerts})

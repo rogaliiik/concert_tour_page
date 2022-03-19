@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Twenty One Pilots | TOUR 2022 | OUT NOW </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href='../static/css/tour.css'>
+</head>
+<body>
+    <header id="header" class="header">
+        <div class="container">
+            <div>
+<!--                <img src="../static/img/named_logo.png" alt="Icy and Scaled" width="600px"> -->
+                <ul class="menu">
+                    <li>
+                        <a href="/">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            |
+                        </a>
+                    </li>
+                    <li class="fa-underline">
+                        <a href="../tour/" >
+                            Tour
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            |
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Merch
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="refers">
+                            Instagram
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            |
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Facebook
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section class="about">
+        <div class="container">
+            <div class="concerts">
+                {% if concerts %}
+                {% for c in concerts %}
+                <div class="city">
+                    <ul>
+                        <li class="arena">
+                            {{ c.arena }}
+                        </li>
+                        <li class="city">
+                            {{ c.city }}
+                        </li>
+                    </ul>
+                </div>
+                <div class="tickets">
+                    <ul>
+                        <li>
+                            <a class="tickets" href="#">
+                                Tickets
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                {% endfor %}
+                {% endif %}
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+
+        </div>
+    </footer>
+
+
+</body>
+</html>

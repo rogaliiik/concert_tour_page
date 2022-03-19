@@ -24,8 +24,8 @@ ul, li {
 }
 
 .header {
-    background: url('../img/pink_logo_bg.png') no-repeat center top / cover;
     padding-top: 25px;
+    background: url('../img/bg-rainbow-short.png') no-repeat fixed center top / cover;
 }
 
 header a {
@@ -48,7 +48,11 @@ header a {
 }
 
 .refers {
-    margin-left: 400px;
+    margin-left: 300px;
+}
+
+.fa-underline {
+    text-decoration: underline;
 }
 
 .booking {

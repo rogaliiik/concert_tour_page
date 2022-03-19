@@ -1,0 +1,75 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Anton', sans-serif;
+    color: black;
+    font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+ul, li {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.header {
+    background: url('../img/album-bg.jpg') no-repeat fixed center top;
+    padding-top: 25px;
+    padding-bottom: 600px;
+    background-size: 100%;
+}
+
+header a {
+    color: #fff;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu li a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 22px;
+    letter-spacing: 0.2em;
+}
+
+.menu li {
+    margin-right: 40px;
+    padding-bottom: 30px;
+}
+
+.refers {
+    margin-left: 300px;
+}
+
+.fa-underline {
+    text-decoration: underline;
+}
+
+.concerts {
+    background: #fff no-repeat;
+}
+
+.tickets {
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    padding: .8em 1em calc(.8em + 3px);
+    border-radius: 0px;
+    background: #FF69B4;
+    box-shadow: 0 -3px #FF69B4 inset;
+    transition: 0.1s;
+}
+
