@@ -20,7 +20,6 @@ ul, li {
 
 .container {
     width: 1000px;
-    /*позиционирование по центру*/
     margin: 0 auto;
 }
 
@@ -64,7 +63,7 @@ header a {
 .booking li a {
     text-transform: uppercase;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 30px;
     letter-spacing: 0.1em;
 }
 
@@ -76,7 +75,7 @@ header a {
     border-radius: 0px;
     background: #FF69B4;
     box-shadow: 0 -3px #FF69B4 inset;
-    transition: 0.2s;
+    transition: 0.1s;
 }
 
 .listen {
@@ -91,7 +90,7 @@ header a {
 }
 
 .record {
-    padding-top: 115px;
+    padding-top: 80px;
 }
 
 .record li {
@@ -107,8 +106,8 @@ header a {
 }
 
 .listening {
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .nav2 {
@@ -122,18 +121,27 @@ header a {
 }
 
 .subscribe {
-    margin-top: 250px;
-    margin-left: 50px;
+    margin-top: 225px;
+    margin-left: 0px;
     text-transform: uppercase;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 40px;
     letter-spacing: 0.1em;
     color: #fff;
 }
 
+.subscribe li {
+    display: flex;
+}
+
+.subscribe li a {
+    margin-left: 10px;
+}
+
 .patches {
-    margin-top: 100px;
-    margin-bottom: 50px;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    margin-left: 80px;
 }
 
 .copyrights li a {
@@ -142,3 +150,30 @@ header a {
     font-size: 14px;
 }
 
+.sub_button {
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 0.1em;
+    margin-top: 30px;
+    margin-left: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 20px;
+    color: #FF69B4;
+    padding: 20px;
+    background: #FFFFFF;
+}
+
+.form-control {;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-top: 30px;
+    text-transform: none;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    padding: 20px;
+    border-radius: 0px;
+}
+
+.abc {
+    display: flex;
+    margin-left: 10px;
+}

@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href='../static/css/main.css'>
 
 </head>
@@ -16,7 +17,7 @@
 <!--                <img src="../static/img/named_logo.png" alt="Icy and Scaled" width="600px"> -->
                 <ul class="menu">
                     <li>
-                        <a href="#">
+                        <a href="/">
                             Home
                         </a>
                     </li>
@@ -98,10 +99,16 @@
             <div class="gallery">
                 <ul class="subscribe">
                     <li>
-                        Get five new patches after subscribing
+                        <a>
+                            Get five new patches after subscribing
+                        </a>
                     </li>
-                    <li class="form">
-                        форма
+                    <li>
+                        <form class="abc" method="post">
+                            {% csrf_token %}
+                            {{ subscribe_form.email }}
+                            <button class="sub_button" type="submit" > Subscribe </button>
+                        </form>
                     </li>
                 </ul>
                 <img class="patches" src="../static/img/patches.png" alt="Patches">
