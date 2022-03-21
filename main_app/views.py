@@ -29,4 +29,22 @@ class MainView(View):
 class TourView(View):
     def get(self, request):
         concerts = Concert.objects.all()
-        return render(request, 'tour.html', {'concerts': concerts})
+        sub_form = SubscribeForm()
+        context = {
+            'subscribe_form': sub_form,
+            'concerts': concerts
+        }
+        return render(request, 'tour.html', context=context)
+
+    def post(self, request):
+        sub_form = SubscribeForm(request.POST)
+        concerts = Concert.objects.all()
+        context = {
+            'subscribe_form': sub_form,
+            'concerts': concerts
+        }
+        if sub_form.is_valid():
+            Subscriber.objects.create(**sub_form.cleaned_data)
+            return HttpResponse('An email with information has been sent')
+        else:
+            return render(request, 'tour.html', context=context)

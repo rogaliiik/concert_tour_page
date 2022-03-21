@@ -24,21 +24,27 @@ ul, li {
 }
 
 .header {
-    background: url('../img/album-bg.jpg') no-repeat fixed center top;
-    padding-top: 25px;
-    padding-bottom: 600px;
-    background-size: 100%;
+    background: #03b0b1 no-repeat;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
 }
 
 header a {
     color: #fff;
 }
 
+header a:hover {
+    color: #FF69B4;
+}
+
 .menu {
     display: flex;
 }
 
-.menu li a {
+.menu a {
     text-transform: uppercase;
     text-decoration: none;
     font-size: 22px;
@@ -46,23 +52,48 @@ header a {
 }
 
 .menu li {
-    margin-right: 40px;
-    padding-bottom: 30px;
+    margin-left: 40px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 22px;
+    letter-spacing: 0.2em;
+    color: #FFFFFF;
+}
+
+.ref2 {
+    display: flex;
 }
 
 .refers {
-    margin-left: 300px;
+    display: flex;
+    margin-left: auto;
 }
 
 .fa-underline {
-    text-decoration: underline;
+
+}
+
+.dragon {
+    background: url("../img/album-bg.jpg") no-repeat fixed center top / cover;
+    padding-bottom: 50%;
+    background-size: 100%;
+}
+
+.booking {
+    /*background: #fff no-repeat fixed center top;*/
+    background: url('../img/dragon.png') no-repeat fixed right bottom;
+    background-size: 60%;
 }
 
 .concerts {
-    background: #fff no-repeat;
+    display: flex;
+    margin-top: 25px;
+    padding-bottom: 40px;
 }
 
 .tickets {
+    text-transform: uppercase;
+    font-size: 30px;
     font-weight: 700;
     color: white;
     text-decoration: none;
@@ -71,5 +102,113 @@ header a {
     background: #FF69B4;
     box-shadow: 0 -3px #FF69B4 inset;
     transition: 0.1s;
+    letter-spacing: 0.1em;
 }
 
+.event {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 35px;
+    letter-spacing: 0.1em;
+    display: block;
+    color: #FF69B4;
+}
+
+.ref {
+    margin-top: 50px;
+    margin-left: auto;
+}
+
+.gallery {
+    display: flex;
+}
+
+@font-face {
+    font-family: "Tenebra";
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/Tenebra.otf')
+}
+
+.hi {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 45px;
+    /*letter-spacing: 0.1em;*/
+    color: #FF69B4;
+    font-family: 'Tenebra', sans-serif;
+    margin-top: 120px;
+    margin-left: 40px;
+}
+
+.scale {
+    margin-top: 50px;
+    max-width: 40%;
+    height: auto;
+    margin-left: auto;
+    transition: 1s;
+}
+
+.scale:hover {
+    transform: scale(1.15);
+}
+
+.title {
+    max-width: 40%;
+    height: auto;
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+.centre {
+    margin-left: 70px;
+}
+
+.copyrights {
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    font-size: 14px;
+}
+
+.sub_button {
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 0.1em;
+    margin-left: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 20px;
+    color: #FF69B4;
+    padding: 20px;
+    background: #FFFFFF;
+}
+
+.abc {
+    display: flex;
+    margin-left: 10px;
+    font-size: 40px;
+}
+
+.subscribe {
+    margin: 0 auto;
+    padding: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 40px;
+    letter-spacing: 0.1em;
+    color: #FF69B4;
+}
+
+.pre-footer {
+    display: flex;
+    background: #FF69B4 no-repeat;
+    font-size: 40px;
+}
+
+.form-control {;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: none;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    padding: 20px;
+    border-radius: 0px;
+}

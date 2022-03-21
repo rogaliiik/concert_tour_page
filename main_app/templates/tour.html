@@ -12,59 +12,83 @@
 <body>
     <header id="header" class="header">
         <div class="container">
-            <div>
-<!--                <img src="../static/img/named_logo.png" alt="Icy and Scaled" width="600px"> -->
-                <ul class="menu">
-                    <li>
-                        <a href="/">
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a>
+            <div class="menu">
+                <div class="ref2">
+                    <ul class="ref2">
+                        <li>
+                            <a href="/">
+                                Home
+                            </a>
+                        </li>
+                        <li>
                             |
-                        </a>
-                    </li>
-                    <li class="fa-underline">
-                        <a href="../tour/" >
-                            Tour
-                        </a>
-                    </li>
-                    <li>
-                        <a>
+                        </li>
+                        <li class="fa-underline">
+                            <a href="../tour/" >
+                                Tour
+                            </a>
+                        </li>
+                        <li>
+                                |
+                        </li>
+                        <li>
+                            <a href="#">
+                                Merch
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="refers">
+                    <ul class="refers">
+                        <li>
+                            <a href="#" >
+                                Instagram
+                            </a>
+                        </li>
+                        <li>
                             |
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Merch
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="refers">
-                            Instagram
-                        </a>
-                    </li>
-                    <li>
-                        <a>
-                            |
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Facebook
-                        </a>
-                    </li>
-                </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Facebook
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </header>
+    <section class="dragon">
+        <div class="container">
+
+        </div>
+    </section>
+
     <section class="about">
         <div class="container">
-            <div class="concerts">
-                {% if concerts %}
+            <div class="gallery">
+                <ul class="hi">
+{#                    <li>#}
+{#                        <img class="title" src="../static/img/two-pink-title.png" alt="top">#}
+{#                    </li>#}
+                    <li class="centre">
+                        presenting
+                    </li>
+                    <li>
+                        new album tour
+                    </li>
+                </ul>
+{#                <a href="../static/img/smiles.jpg" target="_blank"> <img class="promo" src="../static/img/smiles.jpg" alt="Two musicians"></a>#}
+                <img class="scale" src="../static/img/smiles.jpg" alt="Two musicians">
+            </div>
+        </div>
+    </section>
+    <section class="booking">
+        <div class="container">
+            {% if concerts %}
                 {% for c in concerts %}
-                <div class="city">
+            <div class="concerts">
+                <div class="event">
                     <ul>
                         <li class="arena">
                             {{ c.arena }}
@@ -72,9 +96,12 @@
                         <li class="city">
                             {{ c.city }}
                         </li>
+                        <li class="date">
+                            {{ c.date}}
+                        </li>
                     </ul>
                 </div>
-                <div class="tickets">
+                <div class="ref">
                     <ul>
                         <li>
                             <a class="tickets" href="#">
@@ -83,18 +110,38 @@
                         </li>
                     </ul>
                 </div>
-                {% endfor %}
-                {% endif %}
+            </div>
+        {% endfor %}
+        {% endif %}
+        </div>
+    </section>
 
+    <section id="pre-footer" class="pre-footer">
+        <div class="container">
+            <div class="pre-footer">
+                <ul class="subscribe">
+                    <li>
+                        <form class="abc" method="post">
+                            {% csrf_token %}
+                            {{ subscribe_form.email }}
+                            <button class="sub_button" type="submit" > Subscribe </button>
+                        </form>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
-    <footer class="footer">
-        <div class="container">
 
+    <footer id="footer" class="footer">
+        <div class="container">
+            <ul class="copyrights">
+                <li>
+                    <a>
+                        Ⓒ‎: 2022 Copyrights of twenty øne piløts
+                    </a>
+                </li>
+            </ul>
         </div>
     </footer>
-
-
 </body>
 </html>

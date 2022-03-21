@@ -11,11 +11,12 @@
 
 </head>
 <body>
-    <header id="header" class="header">
-        <div class="container">
-            <div class="nav">
-                <ul class="menu">
-                    <li class="fa-underline" >
+<header id="header" class="header">
+    <div class="container">
+        <div class="nav">
+            <div class="ref2">
+                <ul class="ref2">
+                    <li class="fa-underline">
                         <a href="/">
                             Home
                         </a>
@@ -40,8 +41,12 @@
                             Merch
                         </a>
                     </li>
+                </ul>
+            </div>
+            <div class="refers">
+                <ul class="refers">
                     <li>
-                        <a href="#" class="refers">
+                        <a href="#">
                             Instagram
                         </a>
                     </li>
@@ -57,69 +62,75 @@
                     </li>
                 </ul>
             </div>
-            <div>
-                <ul class="booking">
-                    <li>
-                        <a href="#" class="tickets_button">
-                            Booking tickets
-                        </a>
-                    </li>
-                </ul>
-            </div>
         </div>
-    </header>
-    <section id="about" class="about">
-        <div class="container">
-            <div class="nav2">
-                <img class="listening" src="../static/img/record.png" alt="Icy and Scaled" width="500px">
-                <ul class="record">
-                    <li >
-                        <a>
-                            New album "Scaled and Icy" available now
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="listen">
-                            Listen now
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="gallery" class="gallery">
-        <div class="container">
-            <div class="gallery">
-                <ul class="subscribe">
-                    <li>
-                        <a>
-                            Get five new patches after subscribing
-                        </a>
-                    </li>
-                    <li>
-                        <form class="abc" method="post">
-                            {% csrf_token %}
-                            {{ subscribe_form.email }}
-                            <button class="sub_button" type="submit" > Subscribe </button>
-                        </form>
-                    </li>
-                </ul>
-                <img class="patches" src="../static/img/patches.png" alt="Patches">
-            </div>
-        </div>
-    </section>
-
-    <footer id="footer" class="footer">
-        <div class="container">
-            <ul class="copyrights">
+    </div>
+</header>
+<section class="rainbow">
+    <div class="container">
+        <div>
+            <ul class="booking">
                 <li>
-                    <a>
-                        Ⓒ‎: 2022 Copyrights of twenty øne piløts
+                    <a href="#" class="tickets_button">
+                        Booking tickets
                     </a>
                 </li>
             </ul>
         </div>
-    </footer>
+    </div>
+</section>
+
+<section id="about" class="about">
+    <div class="container">
+        <div class="nav2">
+            <img class="listening" src="../static/img/record.png" alt="Icy and Scaled" width="500px">
+            <ul class="record">
+                <li>
+                    <a>
+                        New album "Scaled and Icy" available now
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="listen">
+                        Listen now
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="gallery" class="gallery">
+    <div class="container">
+        <div class="gallery">
+            <ul class="subscribe">
+                <li>
+                    <a>
+                        Get five new patches after subscribing
+                    </a>
+                </li>
+                <li>
+                    <form class="abc" method="post">
+                        {% csrf_token %}
+                        {{ subscribe_form.email }}
+                        <button class="sub_button" type="submit"> Subscribe</button>
+                    </form>
+                </li>
+            </ul>
+            <img class="patches" src="../static/img/patches.png" alt="Patches">
+        </div>
+    </div>
+</section>
+
+<footer id="footer" class="footer">
+    <div class="container">
+        <ul class="copyrights">
+            <li>
+                <a>
+                    Ⓒ‎: 2022 Copyrights of twenty øne piløts
+                </a>
+            </li>
+        </ul>
+    </div>
+</footer>
 </body>
 </html>
