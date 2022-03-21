@@ -36,6 +36,10 @@ header a {
     color: #fff;
 }
 
+header a:hover {
+    color: #FF69B4;
+}
+
 .nav {
     display: flex;
 }
@@ -72,19 +76,14 @@ header a {
 .rainbow {
     background: url('../img/bg-rainbow-short.png') no-repeat fixed center top / cover;
     background-size: 100%;
-
 }
 
 .booking {
     padding-top: 600px;
-    padding-bottom: 10px;
-}
-
-.booking li {
     margin-bottom: 50px;
 }
 
-.booking li a {
+.booking a {
     text-transform: uppercase;
     text-decoration: none;
     font-size: 30px;
