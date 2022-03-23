@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.views.generic.base import View
 from .forms import SubscribeForm
-from .models import Subscriber, Concert
+from .models import Subscriber, Concert, Merch
 from django.http import HttpResponse
 
 
@@ -21,9 +21,8 @@ class MainView(View):
         sub_form = SubscribeForm(request.POST)
         if sub_form.is_valid():
             Subscriber.objects.create(**sub_form.cleaned_data)
-            return HttpResponse('An email with information has been sent')
-        else:
-            return render(request, 'main.html', {'subscribe_form': sub_form})
+        sub_form = SubscribeForm()
+        return render(request, 'main.html', {'subscribe_form': sub_form})
 
 
 class TourView(View):
@@ -38,13 +37,34 @@ class TourView(View):
 
     def post(self, request):
         sub_form = SubscribeForm(request.POST)
-        concerts = Concert.objects.all()
-        context = {
-            'subscribe_form': sub_form,
-            'concerts': concerts
-        }
+
         if sub_form.is_valid():
             Subscriber.objects.create(**sub_form.cleaned_data)
-            return HttpResponse('An email with information has been sent')
-        else:
-            return render(request, 'tour.html', context=context)
+        sub_form = SubscribeForm()
+        context = {
+            'subscribe_form': sub_form,
+            'concerts': Concert.objects.all()
+        }
+
+        return render(request, 'tour.html', context=context)
+
+
+class MerchView(View):
+    def get(self, request):
+        sub_form = SubscribeForm(request.POST)
+        context = {
+            'subscribe_form': sub_form,
+        }
+        return render(request, 'merch.html', context=context)
+
+    def post(self, request):
+        sub_form = SubscribeForm(request.POST)
+
+        if sub_form.is_valid():
+            Subscriber.objects.create(**sub_form.cleaned_data)
+        sub_form = SubscribeForm()
+        context = {
+            'subscribe_form': sub_form,
+        }
+        return render(request, 'merch.html', context=context)
+

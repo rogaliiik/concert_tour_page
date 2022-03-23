@@ -24,7 +24,7 @@ ul, li {
 }
 
 .header {
-    background: #03b0b1 no-repeat;
+    background:rgba(3,176,177,0.7) no-repeat;
     padding-top: 15px;
     padding-bottom: 15px;
     position: fixed;
@@ -75,7 +75,7 @@ header a:hover {
 
 .dragon {
     background: url("../img/album-bg.jpg") no-repeat fixed center top / cover;
-    padding-bottom: 50%;
+    padding-bottom: 60%;
     background-size: 100%;
 }
 
@@ -121,6 +121,7 @@ header a:hover {
 
 .gallery {
     display: flex;
+    margin-bottom: 50px;
 }
 
 @font-face {
@@ -139,6 +140,7 @@ header a:hover {
     font-family: 'Tenebra', sans-serif;
     margin-top: 120px;
     margin-left: 40px;
+
 }
 
 .scale {
@@ -190,7 +192,7 @@ header a:hover {
 
 .subscribe {
     margin: 0 auto;
-    padding: 20px;
+    padding: 30px;
     text-transform: uppercase;
     text-decoration: none;
     font-size: 40px;

@@ -24,7 +24,7 @@ ul, li {
 }
 
 .header {
-    background: #03b0b1 no-repeat;
+    background:rgba(3,176,177,0.7) no-repeat;
     padding-top: 15px;
     padding-bottom: 15px;
     position: fixed;

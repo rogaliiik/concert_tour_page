@@ -10,3 +10,10 @@ class Concert(models.Model):
     arena = models.CharField(max_length=50)
     date = models.DateField()
     city = models.CharField(max_length=50)
+
+
+class Merch(models.Model):
+    title = models.CharField(max_length=50)
+    price = models.IntegerField(default=20)
+    image = models.ImageField(null=True, blank=True, upload_to='images/')
+

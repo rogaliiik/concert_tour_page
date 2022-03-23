@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Twenty One Pilots | TOUR 2022 | OUT NOW </title>
+    <title>Twenty One Pilots | TOUR 2022 | OUT NOW</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href='../static/css/tour.css'>
+    <link rel="stylesheet" href='../static/css/merch.css'>
 </head>
 <body>
-    <header id="header" class="header">
+     <header id="header" class="header">
         <div class="container">
             <div class="menu">
                 <div class="ref2">
@@ -67,51 +68,48 @@
         <div class="container">
             <div class="gallery">
                 <ul class="hi">
-{#                    <li>#}
-{#                        <img class="title" src="../static/img/two-pink-title.png" alt="top">#}
-{#                    </li>#}
                     <li class="centre">
-                        presenting
-                    </li>
-                    <li>
-                        new album tour
+                        Order Scaled and icy merch right now
                     </li>
                 </ul>
-{#                <a href="../static/img/smiles.jpg" target="_blank"> <img class="promo" src="../static/img/smiles.jpg" alt="Two musicians"></a>#}
-                <img class="scale" src="../static/img/smiles.jpg" alt="Two musicians">
             </div>
         </div>
     </section>
+
     <section class="booking">
-        <div class="container">
-            {% if concerts %}
-                {% for c in concerts %}
-            <div class="concerts">
-                <div class="event">
-                    <ul>
-                        <li class="arena">
-                            {{ c.arena }}
-                        </li>
-                        <li class="city">
-                            {{ c.city }}
-                        </li>
-                        <li class="date">
-                            {{ c.date}}
+        <div class="container2">
+{#            {% if merch %}#}
+{#                {% for m in merch %}#}
+            <div class="things">
+                <div class="drop">
+                    <ul class="op">
+                        <li >
+                            <a href="#"><img src="../static/img/sai_simple_hoodie_1_1_.png" alt="merch" width="400"></a>
                         </li>
                     </ul>
-                </div>
-                <div class="ref">
-                    <ul>
+                    <ul class="op">
                         <li>
-                            <a class="tickets" href="#">
-                                Tickets
-                            </a>
+                            <a href="#"><img src="../static/img/merch-1.webp" alt="merch" width="400"></a>
+                        </li>
+                    </ul>
+                    <ul class="op">
+                        <li>
+                            <a href="#"><img src="../static/img/080521_top-productimages-1a.png" alt="merch" width="400"></a>
                         </li>
                     </ul>
                 </div>
+{#                <div class="ref">#}
+{#                    <ul>#}
+{#                        <li>#}
+{#                            <a class="purchase" href="#">#}
+{#                                order#}
+{#                            </a>#}
+{#                        </li>#}
+{#                    </ul>#}
+{#                </div>#}
             </div>
-        {% endfor %}
-        {% endif %}
+{#        {% endfor %}#}
+{#        {% endif %}#}
         </div>
     </section>
 
@@ -142,5 +140,6 @@
             </ul>
         </div>
     </footer>
+
 </body>
 </html>
