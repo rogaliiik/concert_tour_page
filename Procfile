@@ -1,1 +1,1 @@
-web: gunicorn rekruto.wsgi --log-file -
+web: gunicorn festival.wsgi --log-file -
