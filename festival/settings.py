@@ -1,12 +1,11 @@
 import os
 from pathlib import Path
-import dotenv
+from dotenv import load_dotenv
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-dotenv.load_dotenv('.env')
 
-SECRET_KEY = os.environ['SECRET_KEY']
+SECRET_KEY = load_dotenv("SECRET_KEY")
 
 DEBUG = False
 
@@ -54,23 +53,23 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'festival.wsgi.application'
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'festival_db',
-#         'USER': 'postgres',
-#         'PASSWORD': 'postgres',
-#         'HOST': '127.0.0.1',
-#         'PORT': '5432',
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': os.environ.get("POSTGRES_NAME"),  # 'festival_db'
+        'USER': os.environ.get("POSTGRES_USER"),  # 'postgres',
+        'PASSWORD': os.environ.get("POSTGRES_PASSWORD"),  # 'postgres',
+        'HOST': 'db',  # 'localhost',
+        'PORT': 5432,
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 
 
 AUTH_PASSWORD_VALIDATORS = [
@@ -98,11 +97,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'main_app/static'),
-)
+STATIC_ROOT = os.path.join(BASE_DIR, 'main_app/static')
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 

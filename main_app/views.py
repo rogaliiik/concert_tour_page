@@ -20,7 +20,8 @@ class MainView(View):
     def post(self, request):
         sub_form = SubscribeForm(request.POST)
         if sub_form.is_valid():
-            Subscriber.objects.create(**sub_form.cleaned_data)
+            email = sub_form.cleaned_data.get('email')
+            Subscriber.objects.create(email=email)
         sub_form = SubscribeForm()
         return render(request, 'main.html', {'subscribe_form': sub_form})
 
